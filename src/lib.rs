@@ -564,7 +564,7 @@ mod test {
     fn binary_126456() {
         assert_eq!(
             NumberPrefix::binary(126_456f32),
-            NumberPrefix::Prefixed(Prefix::Kibi, 123.492188f32)
+            NumberPrefix::Prefixed(Prefix::Kibi, 123.492_19f32)
         )
     }
 
@@ -633,7 +633,6 @@ mod test {
     }
 
     #[test]
-    #[allow(overflowing_literals)]
     fn and_so_on() {
         // When you hit yotta, don't keep going
         assert_eq!(
