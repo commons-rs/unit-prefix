@@ -20,7 +20,7 @@
 //! example:
 //!
 //! ```
-//! use number_prefix::NumberPrefix;
+//! use unit_prefix::NumberPrefix;
 //!
 //! let amount = 8542_f32;
 //! let result = match NumberPrefix::decimal(amount) {
@@ -47,7 +47,7 @@
 //! if it’s under 1000 — then the standalone value will be returned:
 //!
 //! ```
-//! use number_prefix::NumberPrefix;
+//! use unit_prefix::NumberPrefix;
 //!
 //! let amount = 705_f32;
 //! let result = match NumberPrefix::decimal(amount) {
@@ -78,7 +78,7 @@
 //! For example:
 //!
 //! ```
-//! use number_prefix::NumberPrefix;
+//! use unit_prefix::NumberPrefix;
 //!
 //! let amount = 8542_f32;
 //! let result = match NumberPrefix::binary(amount) {
@@ -114,7 +114,7 @@
 //! prefix in a variety of formats. For example:
 //!
 //! ```
-//! use number_prefix::NumberPrefix;
+//! use unit_prefix::NumberPrefix;
 //!
 //! let amount = 8542_f32;
 //! let result = match NumberPrefix::decimal(amount) {
@@ -139,7 +139,7 @@
 //! metres. Whitespace is allowed between the number and the rest of the string.
 //!
 //! ```
-//! use number_prefix::{NumberPrefix, Prefix};
+//! use unit_prefix::{NumberPrefix, Prefix};
 //!
 //! assert_eq!("7.05E".parse::<NumberPrefix<_>>(),
 //!            Ok(NumberPrefix::Prefixed(Prefix::Exa, 7.05_f64)));
@@ -259,7 +259,7 @@ impl<F: Amounts> NumberPrefix<F> {
     /// # Examples
     ///
     /// ```
-    /// use number_prefix::{Prefix, NumberPrefix};
+    /// use unit_prefix::{Prefix, NumberPrefix};
     ///
     /// assert_eq!(NumberPrefix::decimal(1_000_000_000_f32),
     ///            NumberPrefix::Prefixed(Prefix::Giga, 1_f32));
@@ -277,7 +277,7 @@ impl<F: Amounts> NumberPrefix<F> {
     /// # Examples
     ///
     /// ```
-    /// use number_prefix::{Prefix, NumberPrefix};
+    /// use unit_prefix::{Prefix, NumberPrefix};
     ///
     /// assert_eq!(NumberPrefix::binary(1_073_741_824_f64),
     ///            NumberPrefix::Prefixed(Prefix::Gibi, 1_f64));
@@ -326,7 +326,7 @@ impl Prefix {
 	/// # Examples
 	///
 	/// ```
-	/// use number_prefix::Prefix;
+	/// use unit_prefix::Prefix;
 	///
 	/// assert_eq!("GIGA", Prefix::Giga.upper());
 	/// assert_eq!("GIBI", Prefix::Gibi.upper());
@@ -346,7 +346,7 @@ impl Prefix {
 	/// # Examples
 	///
 	/// ```
-	/// use number_prefix::Prefix;
+	/// use unit_prefix::Prefix;
 	///
 	/// assert_eq!("Giga", Prefix::Giga.caps());
 	/// assert_eq!("Gibi", Prefix::Gibi.caps());
@@ -366,7 +366,7 @@ impl Prefix {
     /// # Examples
     ///
     /// ```
-    /// use number_prefix::Prefix;
+    /// use unit_prefix::Prefix;
     ///
     /// assert_eq!("giga", Prefix::Giga.lower());
     /// assert_eq!("gibi", Prefix::Gibi.lower());
@@ -386,7 +386,7 @@ impl Prefix {
 	/// # Examples
 	///
 	/// ```
-	/// use number_prefix::Prefix;
+	/// use unit_prefix::Prefix;
 	///
 	/// assert_eq!("G",  Prefix::Giga.symbol());
 	/// assert_eq!("Gi", Prefix::Gibi.symbol());

@@ -22,8 +22,7 @@
 ///  1208925819614629200000000 bytes is 1.000 YiB and 1.209 YB
 /// ```
 
-extern crate number_prefix;
-use number_prefix::NumberPrefix;
+use unit_prefix::NumberPrefix;
 use std::fmt::Display;
 
 
