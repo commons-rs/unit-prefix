@@ -22,7 +22,6 @@ repository = "https://github.com/commons-rs/unit-prefix"
 
 [[example]]
 name = "conversions"
-required-features = ["std"]
 
 [features]
 default = ["std"]

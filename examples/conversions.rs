@@ -22,7 +22,7 @@
 //!  1208925819614629200000000 bytes is 1.000 YiB and 1.209 YB
 //! ```
 
-use std::fmt::Display;
+use core::fmt::Display;
 use unit_prefix::NumberPrefix;
 
 
