@@ -1,4 +1,4 @@
-use std::{error::Error, fmt, str};
+use core::{fmt, str};
 
 use super::{NumberPrefix, Prefix};
 
@@ -55,8 +55,8 @@ impl fmt::Display for NumberPrefixParseError {
     }
 }
 
-impl Error for NumberPrefixParseError {}
-
+#[cfg(feature = "std")]
+impl std::error::Error for NumberPrefixParseError {}
 
 #[cfg(test)]
 mod test {

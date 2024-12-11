@@ -158,14 +158,9 @@
 
 #![cfg_attr(not(feature = "std"), no_std)]
 
-#[cfg(feature = "std")]
 mod parse;
 
-#[cfg(not(feature = "std"))]
-use core::ops::{Div, Neg};
-
-#[cfg(feature = "std")]
-use std::{
+use core::{
     fmt,
     ops::{Div, Neg},
 };
@@ -330,7 +325,6 @@ impl<F: Amounts> NumberPrefix<F> {
     }
 }
 
-#[cfg(feature = "std")]
 impl fmt::Display for Prefix {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "{}", self.symbol())
